@@ -36,7 +36,7 @@ public:
             {
                 if(arr1[i] > arr2[j])
                 swap(arr1[i], arr2[j]);
-            }
+            } 
             //for the second array only 
             if(j < m)
             {
