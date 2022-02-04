@@ -7,6 +7,8 @@ using namespace std;
 class Solution{
   public:
    
+   
+   // do it again to learn better
     long long my_counter = 0;
     void merge(long long a[], long long p, long long q, long long r){
         long long l = q-p+1;
