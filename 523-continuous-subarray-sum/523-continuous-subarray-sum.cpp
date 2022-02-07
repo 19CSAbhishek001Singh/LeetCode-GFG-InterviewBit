@@ -1,6 +1,8 @@
 class Solution {
 public:
     bool checkSubarraySum(vector<int>& nums, int k) {
+        
+        // do one more time to learn
         unordered_map<int, int> mymap;
 		mymap[0]=-1;
 		int sum=0;
