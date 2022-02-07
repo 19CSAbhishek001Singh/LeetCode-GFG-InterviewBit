@@ -16,7 +16,6 @@ class Solution{
         //Your code here
         unordered_map<int,int> um;
         int sum=0;
-        int maxi=0;
         for(int i=0;i<n;i++){
             sum+=arr[i];
             if(sum==0){
