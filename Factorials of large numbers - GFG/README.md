@@ -1,5 +1,5 @@
 # Factorials of large numbers
-## Medium 
+##  Medium 
 <div class="problem-statement" style="user-select: auto;">
                 <p style="user-select: auto;"></p><p style="user-select: auto;"><span style="font-size: 18px; user-select: auto;">Given an integer N, find its factorial.</span><br style="user-select: auto;">
 <br style="user-select: auto;">
