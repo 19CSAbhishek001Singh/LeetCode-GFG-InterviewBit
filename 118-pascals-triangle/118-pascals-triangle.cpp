@@ -12,3 +12,5 @@ public:
         return r;
     }
 };
+
+// check pascal triangle 2 also problem 118
