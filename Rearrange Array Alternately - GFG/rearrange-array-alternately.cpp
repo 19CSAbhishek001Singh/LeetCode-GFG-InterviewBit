@@ -9,23 +9,42 @@ using namespace std;
 class Solution{
     public:
     void rearrange(long long *arr, int n) {
-   	stack<int>st;
-    	queue<int>qu;
-    	for(int i=0; i<n/2; i++){
-    	    qu.push(arr[i]);
+   	// stack<int>st;
+    // 	queue<int>qu;
+    // 	for(int i=0; i<n/2; i++){
+    // 	    qu.push(arr[i]);
+    // 	}
+    // 	for(int i=n/2; i<n; i++){
+    // 	    st.push(arr[i]);
+    // 	}
+    // 	for(int i=0; i<n; i++){
+    // 	    if(i%2==0){
+    // 	        arr[i]=st.top();
+    // 	        st.pop();
+    // 	    }
+    // 	    else{
+    // 	        arr[i]=qu.front();
+    // 	        qu.pop();
+    // 	    }
+    // 	}
+    
+    
+    vector<long long> ans(n);
+     long long j=n-1;
+    	for(long long i=0;i<n;i=i+2)
+    	{
+    	    ans[i] = arr[j];
+    	    j--;
     	}
-    	for(int i=n/2; i<n; i++){
-    	    st.push(arr[i]);
+    	j = 0;
+    	for(long long i=1;i<n;i=i+2)
+    	{
+    	    ans[i] = arr[j];
+    	    j++;
     	}
-    	for(int i=0; i<n; i++){
-    	    if(i%2==0){
-    	        arr[i]=st.top();
-    	        st.pop();
-    	    }
-    	    else{
-    	        arr[i]=qu.front();
-    	        qu.pop();
-    	    }
+    	for(long long i=0;i<n;i++)
+    	{
+    	    arr[i] = ans[i];
     	}
     }
 };
