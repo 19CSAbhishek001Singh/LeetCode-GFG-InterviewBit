@@ -16,5 +16,6 @@ public:
     }
 };
 
-// also solve this one
+// also solve this one 
 //https://practice.geeksforgeeks.org/problems/find-missing-and-repeating2512/1#
+//and 268
