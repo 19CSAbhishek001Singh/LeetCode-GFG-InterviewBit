@@ -11,14 +11,14 @@ public:
     int uniquePaths(int m, int n) {
         
          vector<vector<int>> dp(m+1,vector<int>(n+1,-1));
-        // dp[1][1]=1;
          int num=countPaths(0,0,m,n,dp);
          if(m==1&&n==1)
-        return num;
+         return num;
+        
         return dp[0][0];
         
         
-      /*  
+         /* Combinatorics Solution 
         // how much steps we need to do
             int N = n + m - 2;
          // number of steps that need to go down
