@@ -33,8 +33,9 @@ public:
 }
 int MergeSort(vector < int > & nums, int low, int high) {
   if (low >= high) return 0;
+    int inv=0;
   int mid = (low + high) / 2;
-  int inv = MergeSort(nums, low, mid);
+  inv += MergeSort(nums, low, mid);
   inv += MergeSort(nums, mid + 1, high);
   inv += Merge(nums, low, mid, high);
   return inv;
