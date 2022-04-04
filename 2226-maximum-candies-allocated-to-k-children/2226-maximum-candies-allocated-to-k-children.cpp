@@ -11,7 +11,7 @@ public:
  
     int maximumCandies(vector<int>& candies, long long k) {
         long long int ans=0;
-        long long int l=1,h=1e18;
+        long long int l=1,h=1e7;
         while(l<=h){
             long long int mid = l + (h-l)/2;
             if(possible(candies,k,mid)){
