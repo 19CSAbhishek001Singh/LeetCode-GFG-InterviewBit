@@ -13,10 +13,12 @@ public:
                 right++;
             }
             else if(intervals[left][1]<=intervals[right][1]){
+                // overlapping case 1(remove right interval)
                 count++;
                 right++;
             }
             else if(intervals[left][1]>intervals[right][1]){
+                //overlapping case 2 remove left interval
                 count++;
                 left=right;
                 right++;
