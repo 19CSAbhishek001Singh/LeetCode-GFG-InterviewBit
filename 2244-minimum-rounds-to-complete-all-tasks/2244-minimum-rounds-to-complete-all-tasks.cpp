@@ -20,9 +20,9 @@ public:
            if(x.second==1) return -1;
            int count=0;
            while(it.second>3)
-           it.second-=3,cnt++;
+           it.second-=3,count++;
            
-           if(it.second) cnt++;
+           if(it.second) count++;
            ans+=count;
            */
         }
