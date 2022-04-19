@@ -33,3 +33,5 @@ public:
             return elem;
         }
         */
+
+// arr[mid^1] it will give the net odd or previous even according to the element 
