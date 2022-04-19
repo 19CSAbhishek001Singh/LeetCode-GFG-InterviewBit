@@ -21,6 +21,7 @@ public:
   return -1; 
     }
 };
+// o(logn) time
   // also do
  // https://leetcode.com/problems/search-in-rotated-sorted-array-ii/
 // https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/
