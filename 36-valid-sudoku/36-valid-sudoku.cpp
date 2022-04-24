@@ -10,7 +10,7 @@ bool isValidSudoku(vector<vector<char>>& board) {
                 if(board[i][j] != '.'){
                     char c = board[i][j];
                     board[i][j] = '.';
-                    if(!isValid(board, i, j, c)) return false;
+                    if(isValid(board, i, j, c)==false) return false;
                     board[i][j] = c;
                 }
             }
