@@ -12,3 +12,4 @@ public:
         return mini==INT_MAX?-1:mini;
     }
 };
+// done
