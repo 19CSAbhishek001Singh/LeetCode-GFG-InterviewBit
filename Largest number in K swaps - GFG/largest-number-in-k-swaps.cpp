@@ -10,7 +10,7 @@ class Solution
 {
     public:
     //Function to find the largest number after k swaps.
-    void solve(string str,int n,int k,string& ans,int index){
+    void solve(string& str,int n,int k,string& ans,int index){
         if(k==0) return;
         char maxchar=str[index];
         for(int i=index+1;i<n;i++){
