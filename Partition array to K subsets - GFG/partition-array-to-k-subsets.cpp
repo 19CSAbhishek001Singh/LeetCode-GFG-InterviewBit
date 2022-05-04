@@ -21,8 +21,8 @@ class Solution{
             
         if(currsum==sum)
             { return solve(a,n,k,0,count+1,visited,sum,ans);
-              if(ans==true)
-                    return;
+            //   if(ans==true)
+            //         return;
             }
             for(int i=0;i<n;++i)
         {
