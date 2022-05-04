@@ -25,5 +25,3 @@ public:
         return best_index;
     }
 };
-// done 
-// prefix sum
