@@ -1,4 +1,5 @@
-<h2><a href="https://leetcode.com/problems/implement-trie-prefix-tree/">208. Implement Trie (Prefix Tree)</a></h2><h3>Medium</h3><hr><div style="user-select: auto;"><p style="user-select: auto;">A <a href="https://en.wikipedia.org/wiki/Trie" target="_blank" style="user-select: auto;"><strong style="user-select: auto;">trie</strong></a> (pronounced as "try") or <strong style="user-select: auto;">prefix tree</strong> is a tree data structure used to efficiently store and retrieve keys in a dataset of strings. There are various applications of this data structure, such as autocomplete and spellchecker.</p>
+<h2><a href="https://leetcode.com/problems/implement-trie-prefix-tree/">208. Implement Trie (Prefix Tree) and Implement Trie ll
+</a></h2><h3>Medium</h3><hr><div style="user-select: auto;"><p style="user-select: auto;">A <a href="https://en.wikipedia.org/wiki/Trie" target="_blank" style="user-select: auto;"><strong style="user-select: auto;">trie</strong></a> (pronounced as "try") or <strong style="user-select: auto;">prefix tree</strong> is a tree data structure used to efficiently store and retrieve keys in a dataset of strings. There are various applications of this data structure, such as autocomplete and spellchecker.</p>
 
 <p style="user-select: auto;">Implement the Trie class:</p>
 
@@ -7,6 +8,18 @@
 	<li style="user-select: auto;"><code style="user-select: auto;">void insert(String word)</code> Inserts the string <code style="user-select: auto;">word</code> into the trie.</li>
 	<li style="user-select: auto;"><code style="user-select: auto;">boolean search(String word)</code> Returns <code style="user-select: auto;">true</code> if the string <code style="user-select: auto;">word</code> is in the trie (i.e., was inserted before), and <code style="user-select: auto;">false</code> otherwise.</li>
 	<li style="user-select: auto;"><code style="user-select: auto;">boolean startsWith(String prefix)</code> Returns <code style="user-select: auto;">true</code> if there is a previously inserted string <code style="user-select: auto;">word</code> that has the prefix <code style="user-select: auto;">prefix</code>, and <code style="user-select: auto;">false</code> otherwise.</li>
+	<br>
+<strong>For Implement Trie II</strong>
+<br>
+1) Trie(): Ninja has to initialize the object of this “TRIE” data structure.
+
+2) insert(“WORD”): Ninja has to insert the string “WORD”  into this “TRIE” data structure.
+
+3) countWordsEqualTo(“WORD”): Ninja has to return how many times this “WORD” is present in this “TRIE”.
+
+4) countWordsStartingWith(“PREFIX”): Ninjas have to return how many words are there in this “TRIE” that have the string “PREFIX” as a prefix.
+
+5) erase(“WORD”): Ninja has to delete one occurrence of the string “WORD” from the “TRIE”.
 </ul>
 
 <p style="user-select: auto;">&nbsp;</p>
