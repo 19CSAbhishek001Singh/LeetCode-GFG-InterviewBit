@@ -9,7 +9,6 @@ using namespace std;
 class Solution{
 public:
     vector<int> longestCommonPrefix(string str1, string str2){
-       // 
             int i=0;
         string ans="";
         while(i<str1.length()){
