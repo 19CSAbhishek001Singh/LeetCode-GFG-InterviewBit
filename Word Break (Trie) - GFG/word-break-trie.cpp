@@ -11,7 +11,7 @@ using namespace std;
       Node *links[26];
       bool flag = false;
       bool containsKey(char ch){
-          return links[ch-'a'] != nullptr;
+          return links[ch-'a'] != NULL;
       }
       void put(char ch,Node *node){
           links[ch-'a'] = node;
