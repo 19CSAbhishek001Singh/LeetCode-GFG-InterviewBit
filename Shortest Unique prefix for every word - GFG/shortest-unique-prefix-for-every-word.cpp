@@ -7,75 +7,62 @@ using namespace std;
  // } Driver Code Ends
 //User function Template for C++
 
+struct Trienode
+ {
+     int freq;
+     Trienode* child[26]; //a-z
+     Trienode()
+     {
+         freq = 0;
+         for(int i=0;i<26;i++)child[i]=NULL;
+     }
+ };
+
 class Solution
 {
-    #define s 26
-
-    struct TrieNode
-    {
-        struct TrieNode* children[s];
-        int count;
-        bool end;
-    };
-    struct TrieNode* getNode()
-    {
-        struct TrieNode* node = new TrieNode;
-        for(int i = 0; i < s; i++)
-        {
-            node->children[i]=NULL;
-        }
-        node->end=false;
-        node->count=0;
-        return node;
-    }
-    
-    void insert(TrieNode* root,string key)
-    {
-        struct TrieNode* temp=root;
-        int len = key.length();
-        for(int i = 0; i < len; i++)
-        {
-            if(!temp->children[key[i]-'a'])
-                temp->children[key[i]-'a'] = getNode();
-            temp=temp->children[key[i]-'a'];
-            temp->count++;
-        }
-        temp->end = true;
-    }
-    
-    string search(TrieNode* root, string key)
-    {
-        string res;
-        struct TrieNode* temp=root;
-        int len=key.length();
-        for(int i = 0; i < len; i++)
-        {
-            res.push_back(key[i]);
-            temp=temp->children[key[i]-'a'];
-            if(temp->count==1)
-                break;
-        }
-        return res;
-    }
-        
-        
-        
-    // Function to print all prefixes that uniquely
-    // represent all words in arr[0..n-1]
-    public:
+    public: 
+     Trienode* root = new Trienode();
     vector<string> findPrefixes(string arr[], int n)
     {
-        struct TrieNode* root=getNode();
-        for(int i = 0; i< n; i++)
-            insert(root, arr[i]);
+        //code here
+        vector<string>ans;
+        for(int i=0;i<n;i++)
+        buildtrie(arr[i],root);
         
-        vector<string>res;
-        for(int i = 0; i < n; i++)
-            res.push_back(search(root,arr[i]));
-        return res;
+        for(int i=0;i<n;i++)
+        ans.push_back(buildprefix(arr[i],root));
+        return ans;
+       
     }
+    
+    void buildtrie(string s,Trienode* root)
+    {   
+        Trienode* curr = root;
+         for(int i=0;i<s.length();i++)
+         {
+             int index = s[i]-'a'; //25
+             if(curr->child[index]==NULL)
+             curr->child[index]= new Trienode();
+             curr->child[index]->freq++;
+             curr = curr->child[index];
+         }
+    }
+    
+    string buildprefix(string s,Trienode* root)
+    {
+        Trienode* curr = root;
+        string ans = "";
+         for(int i=0;i<s.length();i++)
+         {   
+             int index = s[i]-'a';
+             if(curr->freq==1)break;
+             ans+=s[i];
+              curr = curr->child[index];
+         }
+         return ans;
+    }
+    
 };
-
 // { Driver Code Starts.
 
 int main()
