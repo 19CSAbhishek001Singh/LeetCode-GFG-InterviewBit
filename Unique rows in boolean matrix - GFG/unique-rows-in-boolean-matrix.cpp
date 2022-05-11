@@ -30,11 +30,11 @@ int main()
 // } Driver Code Ends
 
 struct Node{
-   Node *links[2] = {nullptr};
+   Node *links[2];
    bool flag = false;
    
    bool containsKey(int x){
-       return links[x] != nullptr;
+       return links[x] != NULL;
    }
    
    void put(int x,Node *node){
