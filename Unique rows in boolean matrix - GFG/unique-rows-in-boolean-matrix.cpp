@@ -29,12 +29,83 @@ int main()
 }
 // } Driver Code Ends
 
+struct Node{
+   Node *links[2] = {nullptr};
+   bool flag = false;
+   
+   bool containsKey(int x){
+       return links[x] != nullptr;
+   }
+   
+   void put(int x,Node *node){
+       links[x] = node;
+   }
+   
+   Node* getKey(int x){
+       return links[x];
+   }
+   
+   void setEnd(){
+       flag = true;
+   }
+   
+   bool isEnd(){
+       return (flag);
+   }
+};
 
-/*You are required to complete this function*/
-vector<vector<int>> uniqueRow(int M[MAX][MAX],int row,int col)
-{
-//Your code here
-vector<vector<int>> vv;
+class trie{
+   private:
+   Node *root;
+   
+   public:
+   trie(){
+       root = new Node();
+   }
+   
+   void insert(vector<int> arr){
+       Node *node = root;
+       for(int i = 0; i < arr.size(); i++){
+           if(!node->containsKey(arr[i])){
+               node->put(arr[i],new Node());
+           }
+           node = node->getKey(arr[i]);
+       }
+       node->setEnd();
+   }
+   
+   bool search(vector<int> arr){
+       Node *node = root;
+       for(int i = 0; i < arr.size(); i++){
+           if(!node->containsKey(arr[i])){
+               return (false);
+           }
+           node = node->getKey(arr[i]);
+       }
+       return node->isEnd();
+   }
+};
+
+vector<vector<int>> uniqueRow(int M[MAX][MAX],int row,int col){
+   trie tri;
+   vector<vector<int>> ans;
+   for(int i = 0; i < row; i++){
+       vector<int> v;
+       for(int j = 0; j < col; j++){
+           v.push_back(M[i][j]);
+       }
+       
+       if(tri.search(v)) continue;
+       tri.insert(v);
+       ans.push_back(v);
+   }
+   
+   return (ans);
+}
+
+
+/*
+    vector<vector<int>> vv;
     set<vector<int>> sv;
     for(int i=0;i<row;i++){
         vector<int> v (M[i],M[i]+col);
@@ -44,4 +115,4 @@ vector<vector<int>> vv;
         }
     }
     return vv;
-}
+    */
