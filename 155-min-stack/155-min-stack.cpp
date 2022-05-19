@@ -2,11 +2,6 @@ class MinStack {
   stack < long long > st;
   long long mini;
   public:
-    MinStack() {
-      while (st.empty() == false) st.pop();
-      mini = INT_MAX;
-    }
-
   void push(int value) {
     long long val = 1LL*value;
     if (st.empty()) {
