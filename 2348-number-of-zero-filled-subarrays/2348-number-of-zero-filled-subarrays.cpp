@@ -19,5 +19,29 @@ if continuous '0' is n then count n+(n-1)+(n-2)+...+3+2+1
             }
         }
         return ans;
+        /*
+        long long n=nums.size();
+        long long c=0;
+        vector<long long>a;
+        long long ans=0;
+        for(int i=0;i<n;i++) {
+            if(nums[i]==0) {
+                c++;
+            }
+            else{
+                if(c!=0) {
+                    a.push_back(c);
+                    c=0;
+                }
+            }
+        }
+        if(c!=0) {
+            a.push_back(c);
+        }
+        for(int i=0;i<a.size();i++) {
+            ans+=a[i]*(a[i]+1)/2;
+        }
+      return ans;  
+      */
     }
 };
