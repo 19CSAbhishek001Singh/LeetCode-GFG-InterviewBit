@@ -15,6 +15,6 @@ public:
             ans.push_back(res);
         solve(score+1,n,res+"(",ans);
         solve(score-1,n,res+")",ans);
-        return;
+        // return;
     }
 };
