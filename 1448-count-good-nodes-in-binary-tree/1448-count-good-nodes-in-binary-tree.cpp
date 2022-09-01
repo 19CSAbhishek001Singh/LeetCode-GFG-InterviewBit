@@ -11,7 +11,6 @@
  */
 class Solution {
 private:
-    
     int dfs(TreeNode* root, int maxVal){
 	if(!root) return 0;
 	int goodNode = 0;
