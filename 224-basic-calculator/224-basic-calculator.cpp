@@ -22,7 +22,7 @@ public:
                 st.push(sum);
                 st.push(sign);
                 sum=0;
-                sign=+1;
+                sign=1;
             }
             
             else if(s[i]==')'){
