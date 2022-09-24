@@ -12,7 +12,7 @@ public:
         sum += carry; 
         carry = sum / 10;
         sum = sum % 10;
-        res =  res + to_string(sum);
+        res+=to_string(sum);
     }
     reverse(res.begin(), res.end());
     return res;
