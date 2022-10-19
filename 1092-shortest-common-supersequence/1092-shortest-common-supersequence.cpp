@@ -19,14 +19,12 @@ class Solution
             int len = dp[n][m];
             int i = n;
             int j = m;
-            int index = len - 1;
             string ans = "";
             while (i > 0 && j > 0)
             {
                 if (s1[i - 1] == s2[j - 1])
                 {
                     ans += s1[i - 1];
-                    index--;
                     i--;
                     j--;
                 }
