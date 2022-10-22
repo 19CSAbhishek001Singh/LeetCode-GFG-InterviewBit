@@ -11,6 +11,7 @@ public:
     }
     string longestPalindrome(string s) {
         string res="";
+        res+=s[0];
         if(s.size()==1) return s;
         int maxi=0;
         memset(dp, -1, sizeof(dp));
@@ -19,7 +20,7 @@ public:
             for (int j = i; j < s.length(); j++)
             {
                 if (isPal(s, i, j)){
-                    if(abs(i-j)>=maxi){
+                    if(abs(i-j)>maxi){
                         maxi=max(maxi,abs(i-j));
                         res=s.substr(i,j-i+1);
                     }
