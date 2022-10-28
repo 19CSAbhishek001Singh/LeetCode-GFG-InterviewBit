@@ -34,9 +34,9 @@ class Solution
         sort(arr.begin(), arr.end(), comp);
         vector<int> dp(n, 1);
         int maxi = 1;
-        for (int i = 0; i <= n - 1; i++)
+        for (int i = 0; i < n; i++)
         {
-            for (int prev = 0; prev <= i - 1; prev++)
+            for (int prev = 0; prev < i; prev++)
             {
                 if (compare(arr[i], arr[prev]) && 1 + dp[prev] > dp[i])
                 {
