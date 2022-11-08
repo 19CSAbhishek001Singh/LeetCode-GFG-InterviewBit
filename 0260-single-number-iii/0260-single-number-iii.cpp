@@ -1,19 +1,19 @@
 class Solution {
 public:
     vector<int> singleNumber(vector<int>& nums) {
- long long wholexor=0;
+        long long xor1=0;
         for(auto val:nums){
-            wholexor=wholexor^val;
+            xor1=xor1^val;
         }
         
-       long long rbsm = wholexor & (~wholexor +1);
+       long long rbsm = xor1 & (~(xor1-1));
         int x=0,y=0;
         
         for(auto val:nums){
             if((val&rbsm)==0){    
                 x=x^val;
             }
-            else{               //
+            else{              
                 y=y^val;
             }
         }
