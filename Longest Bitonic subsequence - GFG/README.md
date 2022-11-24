@@ -33,6 +33,6 @@ You don't need to read or print anything. Your task is to complete the function&
 &nbsp;</p>
 
 <p><span style="font-size:18px"><strong>Constraints:</strong><br>
-1 ≤&nbsp;length of array ≤&nbsp;200<br>
+1 ≤&nbsp;length of array ≤ 1000<br>
 1 ≤&nbsp;arr[i] ≤&nbsp;1000000</span></p>
 </div>
