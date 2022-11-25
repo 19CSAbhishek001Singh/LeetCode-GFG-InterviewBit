@@ -6,7 +6,7 @@ public:
         vector<long long> nse(n);
         for(int i=n-1;i>=0;i--){
             nse[i]=i+1;
-            while(nse[i]!=n && arr[i]<=arr[nse[i]]){
+            while(nse[i]!=n && arr[i]<arr[nse[i]]){
                 nse[i]=nse[nse[i]];
             }
         }
@@ -17,7 +17,7 @@ public:
          vector<long long> pse(n);
         for(int i=0;i<n;i++){
             pse[i]=i-1;
-            while(pse[i]!=-1&&arr[i]<arr[pse[i]]){
+            while(pse[i]!=-1&&arr[i]<=arr[pse[i]]){
                 pse[i]=pse[pse[i]];
             }
         }
