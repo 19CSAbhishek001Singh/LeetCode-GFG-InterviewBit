@@ -5,19 +5,26 @@ using namespace std;
 // } Driver Code Ends
 class Solution {
   public:
-    bool canPair(vector<int> nums, int k) {
-        vector<int> cv(k);
-        for(int i = 0;i<nums.size();i++){
-            cv[nums[i]%k]++;
+    bool canPair(vector<int> arr, int k) {
+         map<int,int> m;
+        for(int i=0;i<arr.size();i++)
+        {
+            m[((arr[i]%k)+k)%k]++;
         }
-        int l = 1;
-        int r = k-1;
-        while(l<r){
-            if(cv[l]!=cv[r]) return false;
-            l++;
-            r--;
+        for(auto it = m.begin();it!=m.end();it++)
+        {
+            if(it->first == 0)
+            {
+                if(it->second % 2 != 0)       // remainder is 0
+                    return false;     
+            }
+            else if(it->second != m[k - it->first])
+                return false;
+            
+            
+            else if(m.find(k-it->first) == m.end())
+                return false;
         }
-        if((cv[0]&1) or (cv[k/2]&1)) return false;
         return true;
     }  
 };
